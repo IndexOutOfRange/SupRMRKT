@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout
+    android:id="@+id/relative_layout_parent_scan"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+        android:id="@+id/barcode_scanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/transparent"/>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/scan_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/actionbar_alpha75"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:id="@+id/fakeactionbar_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="gone">
+
+            <TextView
+                android:id="@+id/fakeactionbar_text_t1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="0dp"
+                android:text="TEXT1"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/text_medium_fixed"
+                tools:ignore="SpUsage"
+                tools:text="TEXT1"/>
+
+            <TextView
+                android:id="@+id/fakeactionbar_text_t2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="0dp"
+                android:paddingRight="16dp"
+                android:text="TEXT1"
+                android:textColor="@color/gris_textl"
+                android:textIsSelectable="false"
+                android:textSize="8dp"
+                android:textStyle="bold"
+                tools:ignore="SpUsage"
+                tools:text="TEXT2"/>
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gris_bar_alpha75">
+
+        <Button
+            android:id="@+id/btn_validateScan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="22dp"
+            android:text="@string/facteo_valider"/>
+    </RelativeLayout>
+
+</RelativeLayout>

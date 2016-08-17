@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scanner_starter_title">Flasher le code à barre CI</string>
+    <string name="scan_cab_flash_cd">Utiliser le flash du téléphone</string>
+    <string name="back_cd">Retour à l\'écran précédent</string>
+    <string name="text_scan_no_camera">saisie pour le scan</string>
+</resources>
