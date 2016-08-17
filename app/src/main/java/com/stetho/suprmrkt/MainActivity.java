@@ -18,7 +18,7 @@ import pub.devrel.easypermissions.EasyPermissions;
 
 public class MainActivity extends AppCompatActivity implements EasyPermissions.PermissionCallbacks {
 
-    private static final int RC_CAMERA = 10;
+    private static final int RC_CAMERA_AND_VIBRATE = 10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
         return super.onOptionsItemSelected(item);
     }
 
-    @AfterPermissionGranted(RC_CAMERA)
+    @AfterPermissionGranted(RC_CAMERA_AND_VIBRATE)
     private void launchScanproduitActivity() {
         Intent intent = new Intent(MainActivity.this, ScanProduitActivity.class);
         MainActivity.this.startActivityForResult(intent, 1);
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
                 launchScanproduitActivity();
             } else {
                 // Do not have permissions, request them now
-                EasyPermissions.requestPermissions(MainActivity.this, getString(R.string.camera_rationale),RC_CAMERA, perms);
+                EasyPermissions.requestPermissions(MainActivity.this, getString(R.string.camera_and_vibrate_rationale), RC_CAMERA_AND_VIBRATE, perms);
             }
         }
     }
